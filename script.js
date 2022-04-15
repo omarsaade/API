@@ -3,14 +3,17 @@ async function getData() {
     try {
         const response = await fetch(api)
         const data = await response.json();
-        /*    const v = Object.entries(data).map(m => m)
+
+        /*    
+        iza hatina hik awal sater const api = "https://www.breakingbadapi.com/api";
+        const v = Object.entries(data).map(m => m)
             const v = Object.keys(data).map(m => m)
         he tusat5dam badil 3an map w super mhemeeeee
         lezem nesta3mla
             const v = Object.values(data).map(m => m)
    */
-
-        console.log(v);
+        // const v = Object.values(data).map(m => m)
+        // console.log(v);
         // console.log(data);
         printData(data);
 
