@@ -1,0 +1,236 @@
+GEt free api from websites:
+
+the best:
+
+https://rapidapi.com/hub
+
+https://github.com/public-apis/public-apis
+
+https://www.flightradar24.com/6.64,82.43/3
+
+fetch : jalebbb aw i7dar aw isti7dar
+ hye mot cle / kalime mefte7ye
+
+fetch(string) string:huwe url
+fetch(url)
+la7 n7et api jawetooo
+
+fetch("https://www.breakingbadapi.com/api/")
+.then() yaane w ba3dha aw men samma...
+yaane baad ma tjib ma3lumet el api
+
+============================================================
+
+//response hon hye kelshi 7assalto men el fetch meth!!!
+
+fetch("https://www.breakingbadapi.com/api/")
+    .then(function (response) {
+        
+    })
+
+======================================================
+
+HEDA el shiii kello esmoooo
+
+PROMISE : wa3eddddd //fethc wa3detna ano lah traje3 3al ma3lumet
+
+//hala2 he kenet tsuta3mal sabikan
+fetch("https://www.breakingbadapi.com/api/")
+    .then(function (response) {
+        console.log(response);//heda response
+        //response huwe kelshi 7assalto mene el fetch method
+        return response.json();//raja3lna el ma3lumet 3a shakel json
+        //li2an nas7na sta3mlana el meth .json
+
+    })
+    //data hye nafsa zet el reponse.json(); li rajja3neha
+    .then(function (data) {
+        console.log(data);
+    }) 
+
+=====================================================
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//OLD METHOD
+
+
+                      111111111111::::::::::::::::::::
+
+ fetch("https://www.breakingbadapi.com/api/")
+     .then(function (response) {
+         return response.json();
+     })
+     .then(function (data) {
+         console.log(data);
+     })
+
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$////
+
+
+=======================================
+((((((((((((((NEWWWWWW))))))))))))))
+General meth to study
+
+7oz he deyman
+
+const api = "https://www.breakingbadapi.com/api/characters";
+
+async function getData() {
+    const response = await fetch(api)
+    const data = await response.json();
+    console.log(data);
+}
+
+getData()
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+==============================================
+
+// 222222222222222222222222222222:::::::::::::::
+
+
+// NEW METHOD
+//hon byeje dor el function el async : gayer motazamen
+//yaane bya3mul el function 3a janab bi gad el nazar 
+//3an el be2e el umur li 3am tsir
+//btektub async bas 2abel el function
+//w mnhet await : yaane ntor la te7sal 3a kell elma3lumet
+// men el api w baada heta bel reponse
+
+
+//heda nfso el 1 bs heda ajmal wel ajdad
+async function get() {
+    const response = await fetch("https://www.breakingbadapi.com/api/characters");
+    // wel data kamen byentur el reponse la yfawel w bi jib baad ma3lumet
+    //el json
+    const data = await response.json()
+    // console.log(data);
+    // console.log(data[0].name);
+
+    // document.querySelector("#content").innerHTML = "<h1>" + data[0].name + "</h1>"
+
+    document.querySelector("#content h1").innerHTML = data[0].name
+    document.querySelector("#content h5").innerHTML = data[0].birthday
+    document.querySelector("#content img").src = data[0].img
+}
+
+get()
+//darure nestad3i la yjib el ma3lumet wa7eynan bye5od wa2et mishen
+//hik neh7an 3am nest3mel async w await
+// get()
+
+//baad ma te7sal 3al api li hye pizza fike te5eda w ta3mul fi shu
+//mabadak
+
+=======================
+//heda el shi bisir wara ya kbir
+//he el method el adimeeeee
+
+//OLD METHOD
+
+
+// 111111111111::::::::::::::::::::
+// fetch("https://www.breakingbadapi.com/api/")
+//     .then(function (response) {
+//         return response.json();
+//     })
+//     .then(function (data) {
+//         console.log(data);
+//     })
+
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$////
+
+
+// 222222222222222222222222222222:::::::::::::::
+
+
+// NEW METHOD
+//hon byeje dor el function el async : gayer motazamen
+//yaane bya3mul el function 3a janab bi gad el nazar 
+//3an el be2e el umur li 3am tsir
+//btektub async bas 2abel el function
+//w mnhet await : yaane ntor la te7sal 3a kell elma3lumet
+// men el api w baada heta bel reponse
+
+
+//heda nfso el 1 bs heda ajmal wel ajdad
+
+
+
+
+async function get() {
+    const response = await fetch("https://www.breakingbadapi.com/api/characters");
+
+    const data = await response.json()
+    console.log(data);
+
+    data.map(function (actor) {
+        console.log(actor.name);
+    })
+
+
+
+
+    document.querySelector("#content h1").innerHTML = data[0].name
+    document.querySelector("#content h5").innerHTML = data[0].birthday
+    document.querySelector("#content img").src = data[0].img
+
+    //excell methhhho
+    document.querySelector("#actor").innerHTML =
+        `<select>
+${data.map(actor =>
+            `<option> ${actor.name}</option>`)
+        }
+</select> 
+`
+
+
+
+
+    //not bad meth
+
+    //     document.querySelector("#actor").innerHTML = `
+    //     <select>
+    //     <option> ${data[0].name} </option> 
+    //     <option> ${data[1].name}  </option>
+    //     <option> ${data[2].name}  </option>  
+    //     <option> ${data[3].name} </option>
+    //     </select>
+    // `;
+
+
+
+
+
+
+}
+
+get()
+
+
+=======================================
+
+General meth to study
+
+7oz he deyman
+
+const api = "https://www.breakingbadapi.com/api/characters";
+
+async function getData() {
+    const response = await fetch(api)
+    const data = await response.json();
+    console.log(data);
+}
+
+getData()
+
+
+
+==============================================
