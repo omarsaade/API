@@ -5,7 +5,8 @@ async function getData() {
         const data = await response.json();
         /*    const v = Object.entries(data).map(m => m)
             const v = Object.keys(data).map(m => m)
-        he tusat5dam badil 3an map w super mheme
+        he tusat5dam badil 3an map w super mhemeeeee
+        lezem nesta3mla
             const v = Object.values(data).map(m => m)
    */
 
